@@ -20,6 +20,18 @@
 				margin: 5px !important;
 				position: relative !important;
 		}
+
+		#back-btn {
+			float: left;
+			text-align: center;
+			width: 50px;
+		}
+
+		#forward-btn {
+			float: right;
+			text-align: center;
+			width: 50px;
+		}
 		</style>
         <title>Hello World</title>
     </head>
@@ -36,7 +48,12 @@
 			</div>
 			
 			<div class="ui-content">
-<p>Page 1 content goes here</p>			</div><!-- end page 1 content -->
+				<div>
+					<a href="#locationPage" data-transition="slide" data-role="button" data-icon="back" id="back-btn" class="">BACK</a>
+					<a href="#picturePage" data-transition="slide" data-role="button" data-icon="forward" id="forward-btn">NEXT</a>
+				</div>
+				<p>...</p>			
+			</div><!-- end page 1 content -->
 			
 			<div data-role="footer" data-position="fixed">
 				<h1>Page1</h1>
@@ -57,6 +74,10 @@
 			</div>
 			
 			<div class="ui-content">
+				<div>
+					<a href="#locationPage" data-transition="slide" data-role="button" data-icon="back" id="back-btn" class="">BACK</a>
+					<a href="#picturePage" data-transition="slide" data-role="button" data-icon="forward" id="forward-btn">NEXT</a>
+				</div>
 				<p>This is page 2</p>
 			</div><!-- end page 2 content -->
 			
@@ -77,6 +98,10 @@
 			</div>
 			
 			<div class="ui-content">
+				<div>
+					<a href="#locationPage" data-transition="slide" data-role="button" data-icon="back" id="back-btn" class="">BACK</a>
+					<a href="#picturePage" data-transition="slide" data-role="button" data-icon="forward" id="forward-btn">NEXT</a>
+				</div>
 				<p>This is page 3</p>
 			</div><!-- end page 3 content -->
 			
