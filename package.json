@@ -28,7 +28,8 @@
       "cordova-plugin-device": {},
       "cordova-plugin-geolocation": {
         "GPS_REQUIRED": "true"
-      }
+      },
+      "cordova-plugin-network-information": {}
     },
     "platforms": [
       "browser"
