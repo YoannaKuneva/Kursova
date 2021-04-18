@@ -29,7 +29,7 @@
 			margin-top: 40px;
 		}
 
-		/* #back-btn {
+		#back-btn {
 			float: left;
 			text-align: center;
 			width: 50px;
@@ -39,7 +39,7 @@
 			float: right;
 			text-align: center;
 			width: 50px;
-		} */
+		}
 		</style>
         <title>Hello World</title>
     </head>
@@ -56,6 +56,10 @@
 			</div>
 			
 			<div class="ui-content">
+				<div>
+					<a href="#page3" data-transition="slide" data-role="button" data-icon="back" id="back-btn" class="">BACK</a>
+					<a href="#page2" data-transition="slide" data-role="button" data-icon="forward" id="forward-btn">NEXT</a>
+				</div>
 				<p id="devicePG"></p>
 				<section id="viewRegister">
 					<h1>Please register here</h1>
@@ -105,8 +109,11 @@
 			</div>
 			
 			<div class="ui-content">
+				<div>
+					<a href="#page1" data-transition="slide" data-role="button" data-icon="back" id="back-btn" class="">BACK</a>
+					<a href="#page3" data-transition="slide" data-role="button" data-icon="forward" id="forward-btn">NEXT</a>
+				</div>
 				<p>This is page 2</p>
-				
 			</div><!-- end page 2 content -->
 			
 			<div data-role="footer" data-position="fixed">
@@ -127,6 +134,10 @@
 			</div>
 			
 			<div class="ui-content">
+				<div>
+					<a href="#page2" data-transition="slide" data-role="button" data-icon="back" id="back-btn" class="">BACK</a>
+					<a href="#page1" data-transition="slide" data-role="button" data-icon="forward" id="forward-btn">NEXT</a>
+				</div>
 				<p id="devicePG">My Device</p>
 				<ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" id="listList">
 					<li>
