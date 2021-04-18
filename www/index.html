@@ -60,12 +60,14 @@
 				<section id="viewRegister">
 					<h1>Please register here</h1>
 					<form id="formRegister">
+						<div><img src="" alt="" id="myImage"></div>
+						<div><button id="camera-btn" data-role="button">CLICK</button></div>
+						<img src="" alt="picture-view" id="picture-view" height="200" width="200">
+						<button id="addPicture">Add Picture</button>
 						<div>Username:</div>
-						<div><input type="text" name=
-						"username" required /></div>
+						<div><input type="text" name="username" required /></div>
 						<div>Password:</div>
-						<div><input type="password"
-						name="passwd" required /></div>
+						<div><input type="password"	name="passwd" required /></div>
 						<div><input type="submit" value="Register" /></div>
 					</form>
 				</section>
@@ -73,20 +75,18 @@
 					<h1>Please login</h1>
 					<form id="formLogin">
 						<div>Username:</div>
-						<div><input type="text" name=
-						"username" required /></div>
+						<div><input type="text" name="username" required /></div>
 						<div>Password:</div>
-						<div><input type="password"
-						name="passwd" required /></div>
-						<!-- <a href="#page2" data-transition="slide" data-role="button" data-icon="camera" id="camera-btn">Login</a> -->
-						<div><input type="submit" id="buttonLoginUser" value="Login" /><a href="#page2"></a></div>
+						<div><input type="password" name="passwd" required /></div>
+						<a href="#page2" data-transition="slide" data-role="button" id="camera-btn">Login</a>
+						<!-- <div><input type="submit" id="buttonLoginUser" value="Login" /><a href="#page2"></a></div> -->
 					</form>
 				</section>			
 			</div><!-- end page 1 content -->
 			
 			<div data-role="footer" data-position="fixed">
 				<p id="pictureParagraph">Make picture
-					<a href="#picturePage" data-transition="slide" data-role="button" data-icon="camera">Camera</a>
+					<a href="#picturePage" id="camera-btn" data-transition="slide" data-role="button" data-icon="camera">Camera</a>
 				</p>
 			</div><!-- /footer -->
 		</div>
@@ -106,6 +106,7 @@
 			
 			<div class="ui-content">
 				<p>This is page 2</p>
+				
 			</div><!-- end page 2 content -->
 			
 			<div data-role="footer" data-position="fixed">

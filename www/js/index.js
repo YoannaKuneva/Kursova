@@ -56,3 +56,60 @@ function geolocationSuccess(position) {
 function geolocationError(error) {
     alert(error);    
 }
+
+//Picture
+
+function getPicutre() {
+    navigator.camera.getPicture(succeededCameraCallback, failedCameraCallback, {
+        quality: 25,
+        destinationType: Camera.DestinationType.DATA_URL
+    });
+}
+
+function succeededCameraCallback(imageData) {
+    $('#myImage').attr('src', 'data:image/jpeg;base64,' + imageData);
+    $('#myImage').css('display', 'block');
+    $('#myImage').show();
+}
+
+function failedCameraCallback(message) {
+    alert(message);
+}
+
+function sendPictureRequest() {
+    $.mobile.loading("show");
+
+    let base64Img = $("#myImage").attr('src');
+    let userName = $('#username').val();
+    let password = $('#password').val();
+
+    let requestData = {
+        UserName: userName,
+        Password: password,
+        Picture: base64Img
+    };
+
+    console.log({ requestData });
+
+    $.ajax({
+        type: "PUT",
+        url: baseSurviceUrl + "picture",
+        contentType: "application/json",
+        dataType: "json",
+        data: JSON.stringify(requestData),
+        success: function() {
+            $.mobile.loading("hide");
+            alert("Successfully added!");
+            loadDetailsPage();
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            $.mobile.loading("hide");
+            loadDetailsPage();
+        }
+    });
+}
+
+function loadHomePage() {
+    const homePage = $("#page1");
+    $.mobile.pageContainer.pagecontainer("change", homePage, {});
+}
