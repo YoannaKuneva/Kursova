@@ -9,7 +9,7 @@ function onDeviceReady() {
     window.addEventListener("batterystatus", onBatteryStatus, false);
     
     $("#camera-btn").click(getPicutre);
-    $("#addPicture").click(sendPictureRequest);
+    // $("#addPicture").click(sendPictureRequest);
     $("#buttonRegisterUser").click(getData);
 }
 
